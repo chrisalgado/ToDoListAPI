@@ -68,7 +68,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     }
 }
 
-@media (min-width: 690px){
+@media (max-width: 690px){
     .create-task{
         width: 700px;
         height: 400px;
