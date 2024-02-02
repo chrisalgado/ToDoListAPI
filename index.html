@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To do</title>
+</head>
+<body>    
+    <form class="create-task" action="main.js" method="post">
+        <h1>Create a task</h1>
+
+        <section class="form-inputs">
+            <label>name: </label> <input type="text" class="input-task" id="name">
+            <label>description: </label> <input type="text" class="input-task" id="description">
+            <label>status </label> <input type="text" class="input-task" id="status">
+            <label>dueDate: </label> <input type="date" class="input-task" id="dueDate">
+        </section>
+
+        <button type="submit" onclick="{handleNewToDo()}" class="button-submit"> Add Task</button>
+    </form>
+
+<script src="main.js"></script>
+</body>
+</html>
