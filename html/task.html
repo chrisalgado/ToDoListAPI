@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>Create Task</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <button class="buttonSideBar" onclick="w3_open()">☰</button>
+        <section class="section-sidebar-info">
+            <a href="../index.html" class="home">To-do list</a>
+        </section>
+    </header>
+
+    <section class="sideBarMenu" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="buttonSideBar">&times;</button>
+        <section class="container-items">
+            <a href="task.html" class="item-sideBar" id="Task">TASK</a>
+            <a href="profile.html" class="item-sideBar">PROFILE</a>
+        </section>
+    </section>
+
+    <section class="task-section-container" >
+        <button id="createTaskButton" class="createTaskButton">Create a Task</button>
+
+            <dialog id="modal-create-task-form">
+                <h1>Create a Task</h1>
+                <form action="" method="modal-create-task-form">
+                    <section class="form-create-task">
+                        <input type="text" placeholder="task" class="input-task-creation">
+                        <input type="text" placeholder="description" class="input-task-creation">
+                        <input type="date" class="input-task-creation" id="date-input">
+                        <input type="text" class="input-task-creation">
+                        <input type="button" id="button-form" value="Add Task" class="button-task-creation" onclick="handleNewToDo()">
+                    </section>
+                </form>
+            </dialog>
+        
+        <section class="task-created-container" style="display: block;" >
+            <section class="card-container">
+                <section class="card-container-items">
+                    <h1 class="card-input-option" id="nameTask">Task1</h1>
+                    <section class="details-item-card">
+                        <input type="text" id="dueDate"  class="card-input-option " placeholder="2024-02-04">
+                        <input type="text" id="status"  class="card-input-option  redStatus" placeholder="Doing">
+                    </section>
+                </section>
+        
+                <section class="buttons-card-options">
+                    <button onclick="w3_close()" class="card-items-option-buttons card-option-edit">EDIT</button>
+                    <button onclick="w3_close()" class="card-items-option-buttons card-option-delete">DELETE</button>
+                </section>
+        
+            </section>
+
+    </section>
+
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -4,80 +4,288 @@
 }
 
 body{
-    background-color: #A2BCE0;
+    background-color: #F8F7FF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*INDEX TITLE*/
+
+.title-home{
+    font-size: 70px;
+    color: #FFD8BE;
+    margin-top: 60px;
+    padding: 10px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    
 }
 
-.create-task{
-width: 600px;
-height: 400px;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 10px;
-margin-left: 300px;
-margin-top: 125px;
-border-radius: 30px;
-border: 1px solid #5299D3;
-padding: 30px;
-background-color: #0B5563;
-color: white;
-border: none;
-box-shadow: 10px 10px 5px #5299D3;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@keyframes slidein{
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
-.input-task{
-    padding: 8px;
-    width: 400px;
-    border-radius: 7px;
+/* NAVBAR */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #FFD8BE;
+    padding: 10px;
+    align-items: center;
+}
+
+.buttonSideBar {
+    padding: 15px;
     border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    -webkit-transition: all 0.25s;
+    cursor: pointer;
 }
 
-.button-submit{
-    padding: 8px;
+.buttonSideBar:hover {
+    transform: rotate(90deg);
+    color: white;
+}
+
+.section-sidebar-info {
+    color: white;
+    letter-spacing: 0.2em;
+}
+
+.home{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* SIDEBAR  DESIGN */
+
+.sideBarMenu {
     width: 200px;
-    margin-top: 20px;
-    margin-left: 220px;
-    background-color: #5299D3;
+    height: 100%;
+    position: absolute;
+    margin-top: -90px;
+    background-color: #e4b597fc;
+    z-index: 111px;
+}
+
+.item-sideBar{
+    padding: 15px;
+    margin-top: 16px;
+    background-color: #e4b597fc;
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+}
+
+.container-items{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.item-sideBar:hover{
+    background-color: #FFD8BE;
+}
+
+/*TASK created design */
+
+.task-section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.createTaskButton{
+    padding: 14px;
+    width: 390px;
+    border-radius: 10px;
+    background-color: #B8B8FF;
     border: none;
     color: white;
-    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 20px;
 }
 
+.task-created-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    border-top: 0.5px solid black;
 
-.form-inputs{
+}
+
+/* CARD DESIGN*/
+
+.card-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 370px;
+    height: 120px;
+    background-color: white;
+    box-shadow: 3px 3px 3px black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card-container-items{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 70%;
+    gap: 10px;;
+}
+
+.card-input-option {
+    width: 175px;
+    height: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: black;
+    letter-spacing: 0.2em;
+}
+
+.details-item-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+
+}
+
+.buttons-card-options{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-items-option-buttons{
+    padding: 8px;
+    width: 200px;
+    background-color: transparent;
+    color: black;
+    border: 0px;
+    letter-spacing: 0.2em;
+}
+
+.card-option-edit{
+    background-color: rgb(82, 237, 97);
+    color: white;
+}
+
+.card-option-delete {
+    background-color: rgb(216, 104, 104);
+    color: white;
+}
+
+/*profile section*/
+
+.profile{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 175px;
+    gap: 15px;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+    /*  MODAL  */
+#modal-create-task-form::backdrop{
+    background-color: rgba(0, 0, 0, .65);
+}
+
+#modal-create-task-form {
+    width: 300px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 120px 60px;
+}
+
+#modal-create-task-form > h1{
+    margin-bottom: 20px;
+}
+
+.form-create-task{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-
-@media (max-width: 1042px){
-    .create-task{
-        width: 700px;
-        height: 400px;
-        padding: 10px;
-        margin-left: 0px;
-        margin-top: 50px;
-        background-color: transparent;
-        box-shadow: none;
-        border: 0px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+.input-task-creation{
+    padding: 10px;
 }
 
-@media (max-width: 690px){
-    .create-task{
-        width: 700px;
-        height: 400px;
-        margin-top: 50px;
-        background-color: transparent;
-        box-shadow: none;
-        border: 0px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+.button-task-creation{
+    padding: 10px;
+    border: none;
+    background-color: #9381FF;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+
+
+@media(min-width: 632px) and (max-width:1060px) {
+    body{
     }
+
+    #modal-create-task-form {
+        margin: 120px 170px;
+    }
+
+}
+
+@media(min-width: 1061px) and (max-width: 2100px) {
+    .task-section-container{
+    }
+
+    #modal-create-task-form {
+        margin: 150px 800px;
+    }
+
 }

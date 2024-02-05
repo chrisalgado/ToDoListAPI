@@ -1,6 +1,33 @@
+//Const for modal
+const btnShowForm = document.getElementById("createTaskButton");
+const btnCloseModal = document.getElementById("button-form");
+const modal = document.getElementById("modal-create-task-form");
+
+//API 
 const API_URL_CREATE_ITEMS = "https://apitodo-2yow.onrender.com/items";
 const API_URL_GET_ITEMS = "https://apitodo-2yow.onrender.com/items";
 const api_key = "JzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlRlc3QiLCJpYXQiOjE1MTYyMzkwMjJ9";
+
+
+//EXIT AND OPEN NAVBAR
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// SHOW CREATE TASK MODAL
+btnShowForm.addEventListener("click", ()=>{
+    modal.showModal();
+    console.log("success");
+});
+
+btnCloseModal.addEventListener("click", () => {
+    modal.close();
+    console.log(modal.close());
+});
 
 
 //function to POST the data to the API, no status needed since it will be a new task it shouldn't be on process or done. 
@@ -70,3 +97,5 @@ async function getToDos(){
     }
 
 }
+
+//The method doesn't work, I had errors. unable to execute correctly
